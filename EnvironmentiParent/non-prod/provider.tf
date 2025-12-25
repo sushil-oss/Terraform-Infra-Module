@@ -1,4 +1,13 @@
 terraform {
+
+  backend "azurerm" {
+  resource_group_name  = "rgsushis2"
+  storage_account_name = "stgsudhisl01"
+  container_name       = "tfstate"
+  key                  = "non-prod.terraform.tfstate"
+}
+
+
   required_providers {
     azurerm = {
       source = "hashicorp/azurerm"
@@ -11,3 +20,5 @@ provider "azurerm" {
   features {}
   subscription_id = "6c750392-d85d-41e6-a2be-4dc4ddc9d11d"
 }
+
+
