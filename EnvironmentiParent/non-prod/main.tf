@@ -4,6 +4,13 @@ module "rg1" {
 
 }
 
+module "storage" {
+  depends_on = [ module.rg1 ]
+  source = "../../Storage_account"
+  stgs = var.stgs
+  
+}
+
 
 module "vnet" {
   depends_on = [ module.rg1 ]
