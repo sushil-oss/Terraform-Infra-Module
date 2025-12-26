@@ -1,9 +1,9 @@
 terraform {
 
   backend "azurerm" {
-  resource_group_name  = "rgsushis2"
-  storage_account_name = "stgsudhisl01"
-  container_name       = "tfstate"
+  resource_group_name  = "rgsudhisl"
+  storage_account_name = "sushstg"
+  container_name       = "sushcont"
   key                  = "non-prod.terraform.tfstate"
 }
 
